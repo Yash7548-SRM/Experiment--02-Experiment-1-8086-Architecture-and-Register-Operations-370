@@ -166,6 +166,7 @@ Write an 8086 assembly language program to exchange the contents of two
 
 ### Assembly Program
 
+``` asm
 .MODEL SMALL
 .STACK 100H
 
@@ -187,7 +188,7 @@ MAIN PROC
     INT 21H
 MAIN ENDP
 END MAIN
- 
+ ```
 
 ### Expected Result
 
