@@ -166,6 +166,27 @@ Write an 8086 assembly language program to exchange the contents of two
 
 ### Assembly Program
 
+.MODEL SMALL
+.STACK 100H
+
+.DATA
+    VALUE1 DW 1111H
+    VALUE2 DW 2222H
+
+.CODE
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX
+
+    MOV AX, VALUE1      ; Load first value into AX
+    MOV BX, VALUE2      ; Load second value into BX
+    MOV VALUE1, BX      ; Store BX at first location
+    MOV VALUE2, AX      ; Store AX at second location
+
+    MOV AH, 4CH
+    INT 21H
+MAIN ENDP
+END MAIN
  
 
 ### Expected Result
@@ -176,7 +197,7 @@ Write an 8086 assembly language program to exchange the contents of two
   VALUE2                       `2222H`           `1111H`
 
 ### Explanation
-
+The 8086 cannot move data directly from one memory location to another with a single MOV, so registers are used as temporary storage. VALUE1 is loaded into AX and VALUE2 into BX. BX is then written to VALUE1 and AX to VALUE2, so the two values are exchanged. No data is lost because both original values are held in registers before either memory location is overwritten.
   
 ------------------------------------------------------------------------
 
