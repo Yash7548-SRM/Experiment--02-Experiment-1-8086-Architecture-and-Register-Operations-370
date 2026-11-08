@@ -216,6 +216,12 @@ The 8086 cannot move data directly from one memory location to another with a si
 
 
 
+<img width="1887" height="907" alt="image" src="https://github.com/user-attachments/assets/7531cc52-27dd-4998-80d3-752287593da2" />
+
+
+<img width="1880" height="907" alt="image" src="https://github.com/user-attachments/assets/8fd18b9d-2de7-4570-a825-e45768470c88" />
+
+
 ## Result
 
 The 8086 architecture and the functions of the BIU and EU were studied.
